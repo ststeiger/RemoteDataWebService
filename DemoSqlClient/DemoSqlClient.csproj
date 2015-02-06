@@ -49,7 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppCode\ServerSideCode.cs">
+    <Compile Include="AppCode\Trash\ServerSideCode.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="AppCode\SqlServiceFormsAuthEnabled.cs" />

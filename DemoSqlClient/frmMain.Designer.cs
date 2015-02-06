@@ -30,6 +30,8 @@
         {
             this.dgvBasicData = new System.Windows.Forms.DataGridView();
             this.btnGetSchema = new System.Windows.Forms.Button();
+            this.btnExecuteScalar = new System.Windows.Forms.Button();
+            this.btnExecuteNonQuery = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBasicData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,11 +53,33 @@
             this.btnGetSchema.UseVisualStyleBackColor = true;
             this.btnGetSchema.Click += new System.EventHandler(this.btnGetSchema_Click);
             // 
+            // btnExecuteScalar
+            // 
+            this.btnExecuteScalar.Location = new System.Drawing.Point(94, 382);
+            this.btnExecuteScalar.Name = "btnExecuteScalar";
+            this.btnExecuteScalar.Size = new System.Drawing.Size(106, 23);
+            this.btnExecuteScalar.TabIndex = 2;
+            this.btnExecuteScalar.Text = "Execute Scalar";
+            this.btnExecuteScalar.UseVisualStyleBackColor = true;
+            this.btnExecuteScalar.Click += new System.EventHandler(this.btnExecuteScalar_Click);
+            // 
+            // btnExecuteNonQuery
+            // 
+            this.btnExecuteNonQuery.Location = new System.Drawing.Point(206, 382);
+            this.btnExecuteNonQuery.Name = "btnExecuteNonQuery";
+            this.btnExecuteNonQuery.Size = new System.Drawing.Size(106, 23);
+            this.btnExecuteNonQuery.TabIndex = 3;
+            this.btnExecuteNonQuery.Text = "ExecuteNonQuery";
+            this.btnExecuteNonQuery.UseVisualStyleBackColor = true;
+            this.btnExecuteNonQuery.Click += new System.EventHandler(this.btnExecuteNonQuery_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(628, 417);
+            this.Controls.Add(this.btnExecuteNonQuery);
+            this.Controls.Add(this.btnExecuteScalar);
             this.Controls.Add(this.btnGetSchema);
             this.Controls.Add(this.dgvBasicData);
             this.Name = "frmMain";
@@ -70,6 +94,8 @@
 
         private System.Windows.Forms.DataGridView dgvBasicData;
         private System.Windows.Forms.Button btnGetSchema;
+        private System.Windows.Forms.Button btnExecuteScalar;
+        private System.Windows.Forms.Button btnExecuteNonQuery;
     }
 }
 

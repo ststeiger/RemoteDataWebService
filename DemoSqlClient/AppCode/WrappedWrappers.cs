@@ -20,12 +20,16 @@ namespace DemoSqlClient
 
             this.Workaround.ParameterName = prm.ParameterName;
             this.Workaround.Value = prm.Value;
-            this.Workaround.DbType = (SqlService.DbType)prm.DbType;
+            // this.Workaround.DbType = (SqlService.DbType)prm.DbType;
+            this.Workaround.DbType = (SqlService.DbType)System.Enum.Parse(typeof(SqlService.DbType), prm.DbType.ToString(), true);
+
 
             this.Workaround.Size = prm.Size;
             this.Workaround.Precision = prm.Precision;
             this.Workaround.Scale = prm.Scale;
-            this.Workaround.Direction = (SqlService.ParameterDirection)prm.Direction;
+            this.Workaround.Direction = (SqlService.ParameterDirection)System.Enum.Parse(typeof(SqlService.ParameterDirection), prm.Direction.ToString(), true);
+
+
             this.Workaround.SourceColumn = prm.SourceColumn;
             // this.Workaround.SourceVersion = (SqlService.DataRowVersion)prm.SourceVersion; // Not a valid value ? WTF ??? 
             this.Workaround.SourceVersion = (SqlService.DataRowVersion)System.Enum.Parse(typeof(SqlService.DataRowVersion), prm.SourceVersion.ToString(), true);
