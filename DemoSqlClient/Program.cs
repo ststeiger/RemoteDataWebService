@@ -1,7 +1,4 @@
 ﻿
-using System.Windows.Forms;
-
-
 namespace DemoSqlClient
 {
 
@@ -20,18 +17,16 @@ namespace DemoSqlClient
 
             if (bShowForm)
             {
-                Application.EnableVisualStyles();
-                Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new frmMain());
-            }
-
-
-            if (!bShowForm)
+                System.Windows.Forms.Application.EnableVisualStyles();
+                System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
+                System.Windows.Forms.Application.Run(new frmMain());
+            } // End if (bShowForm) 
+            else
             {
                 System.Console.WriteLine(System.Environment.NewLine);
                 System.Console.WriteLine(" --- Press any key to continue --- ");
                 System.Console.ReadKey();
-            }
+            } // End if (!bShowForm) 
             
         } // End Sub Main 
 
@@ -39,4 +34,4 @@ namespace DemoSqlClient
     } // End Class Program 
 
 
-}
+} // End Namespace DemoSqlClient 

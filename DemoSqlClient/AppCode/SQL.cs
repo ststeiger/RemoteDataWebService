@@ -3,8 +3,10 @@ namespace DemoSqlClient
 {
 
 
+    // http://localhost:3830/COR-Basic/SoapApi/SqlService.asmx
     internal class SQL
     {
+
         public static System.Data.Common.DbProviderFactory ProviderFactory = System.Data.Common.DbProviderFactories.GetFactory("System.Data.SqlClient");
         private static SqlService.SqlService service = SetupService();
 
