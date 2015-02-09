@@ -82,15 +82,17 @@ WHERE uuid = @uuid
 
             using (System.Data.IDbCommand cmd = SQL.CreateCommand(strSQL))
             {
-                // cmd.CommandText = "SELECT TOP 1 BE_ID FROM T_Benutzer WHERE BE_ID = @be";
-                SQL.AddParameter(cmd, "@be", 12435);
+                cmd.CommandText = "SELECT TOP 1 BE_User FROM T_Benutzer WHERE BE_ID = @be";
+                //SQL.AddParameter(cmd, "@be", 12435);
+                SQL.AddParameter(cmd, "@be", 12768);
+                
                 SQL.AddParameter(cmd, "@uuid", "3FF28752-C436-47F4-94F7-2471B06D30D9");
 
                 
 
                 object obj = SQL.ExecuteScalar(cmd);
-                byte[] content = (byte[])obj;
-                System.IO.File.WriteAllBytes(@"d:\bbb.docx", content);
+                // byte[] content = (byte[])obj;
+                // System.IO.File.WriteAllBytes(@"d:\bbb.docx", content);
 
                 MsgBox(obj);
             }
