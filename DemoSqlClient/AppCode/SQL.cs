@@ -11,17 +11,13 @@ namespace DemoSqlClient
         private static SqlService.SqlService service = SetupService();
 
 
-
-
-
         public static SqlService.SqlService SetupService()
         {
             SqlServiceFormsAuthEnabled service = new SqlServiceFormsAuthEnabled();
             // service.Url = "http://localhost:3830/COR-Basic/SoapApi/SqlService.asmx";
-            // service.Url = "https://www6.cor-asp.ch/cor_basic/demo/SoapApi/SqlService.asmx";
+            service.Url = "https://www6.cor-asp.ch/COR_Basic_Demo/SoapApi/SqlService.asmx";
             // service.Credentials = new System.Net.NetworkCredential("username", "password", "domain");
             // service.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
-
 
             service.Login("username", "password");
             string loginStatus = service.GetLoginStatus();

@@ -54,8 +54,12 @@ namespace DemoSqlClient
         {
             System.Net.HttpWebRequest request = default(System.Net.HttpWebRequest);
             request = (System.Net.HttpWebRequest)System.Net.HttpWebRequest.Create(uri);
+            request.Timeout = base.Timeout; // Important !!!
+            //request.UserAgent = base.UserAgent;
+            //request.Proxy = base.Proxy;
             request.Credentials = base.Credentials;
             request.CookieContainer = new System.Net.CookieContainer();
+            
 
             if (m_authCookie != null)
             {
@@ -80,8 +84,7 @@ namespace DemoSqlClient
             sb = null;
 
             return strRet;
-        }
-
+        } // End Function GetHeaderInfo
 
 
         /// <summary>
@@ -110,11 +113,13 @@ namespace DemoSqlClient
 
                 // Save it for future reference and use.
                 m_authCookie = authCookie;
-            }
+            } // End if (m_authCookie == null && cookieName != null)
 
             return response;
         } // GetWebResponse 
 
 
     } // SSRS_2005_Administration_WithFOA 
-}
+
+
+} // End Namespace DemoSqlClient 

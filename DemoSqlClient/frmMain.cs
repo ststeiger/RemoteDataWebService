@@ -82,9 +82,9 @@ WHERE uuid = @uuid
 
             using (System.Data.IDbCommand cmd = SQL.CreateCommand(strSQL))
             {
-                cmd.CommandText = "SELECT TOP 1 BE_User FROM T_Benutzer WHERE BE_ID = @be";
+                cmd.CommandText = "SELECT TOP 1 BE_ID FROM T_Benutzer WHERE BE_User = @be";
                 //SQL.AddParameter(cmd, "@be", 12435);
-                SQL.AddParameter(cmd, "@be", 12768);
+                SQL.AddParameter(cmd, "@be", "administrator");
                 
                 SQL.AddParameter(cmd, "@uuid", "3FF28752-C436-47F4-94F7-2471B06D30D9");
 
