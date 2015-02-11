@@ -55,8 +55,8 @@ namespace DemoSqlClient
             System.Net.HttpWebRequest request = default(System.Net.HttpWebRequest);
             request = (System.Net.HttpWebRequest)System.Net.HttpWebRequest.Create(uri);
             request.Timeout = base.Timeout; // Important !!!
-            //request.UserAgent = base.UserAgent;
-            //request.Proxy = base.Proxy;
+            request.UserAgent = base.UserAgent;
+            request.Proxy = base.Proxy;
             request.Credentials = base.Credentials;
             request.CookieContainer = new System.Net.CookieContainer();
             
